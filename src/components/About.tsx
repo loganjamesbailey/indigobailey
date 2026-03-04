@@ -89,7 +89,7 @@ export default function About() {
               reconsider, and feel something shift beneath the surface.
             </p>
             <p>
-              Based in Virginia, she draws inspiration from the natural world,
+              Based in North Carolina, she draws inspiration from the natural world,
               Victorian literature, and the quiet moments that contain
               multitudes.
             </p>
@@ -185,7 +185,7 @@ export default function About() {
                 color: "var(--light-muted)",
               }}
             >
-              Virginia
+              North Carolina
             </p>
           </div>
         </div>
