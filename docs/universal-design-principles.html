@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Universal Design System Reference</title>
+  <style>
+    :root {
+      --bg: #1a1216;
+      --surface: #241b1f;
+      --border: #3a2e32;
+      --text: #e8ddd0;
+      --muted: #a89888;
+      --accent: #c4784a;
+      --primary: #6b2d3e;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Georgia', serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.618;
+      padding: 47px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    h1 { font-size: 2.618rem; margin-bottom: 29px; line-height: 1.1; }
+    h2 { font-size: 1.618rem; margin: 47px 0 18px; color: var(--accent); line-height: 1.1; }
+    h3 { font-size: 1.2rem; margin: 29px 0 11px; }
+    p { margin-bottom: 18px; color: var(--muted); }
+
+    code {
+      font-family: 'Courier New', monospace;
+      background: var(--surface);
+      padding: 2px 7px;
+      border-radius: 4px;
+      font-size: 0.875rem;
+    }
+
+    pre {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 18px;
+      overflow-x: auto;
+      margin-bottom: 18px;
+      font-size: 0.833rem;
+      line-height: 1.6;
+    }
+
+    pre code { background: none; padding: 0; }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 29px;
+    }
+
+    th, td {
+      text-align: left;
+      padding: 11px 18px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    th { color: var(--accent); font-size: 0.833rem; text-transform: uppercase; letter-spacing: 0.05em; }
+    td { color: var(--muted); font-size: 0.875rem; }
+
+    .swatch-row { display: flex; gap: 11px; flex-wrap: wrap; margin-bottom: 18px; }
+    .swatch {
+      width: 76px;
+      height: 47px;
+      border-radius: 4px 24px 4px 24px;
+      display: flex;
+      align-items: flex-end;
+      padding: 4px 7px;
+      font-size: 0.694rem;
+      font-family: monospace;
+      color: var(--text);
+    }
+
+    .scale-demo { display: flex; align-items: baseline; gap: 18px; flex-wrap: wrap; margin-bottom: 29px; }
+    .scale-demo span { white-space: nowrap; }
+
+    .spacing-demo { display: flex; align-items: flex-end; gap: 7px; margin-bottom: 29px; }
+    .spacing-block {
+      background: var(--accent);
+      border-radius: 2px 12px 2px 12px;
+      opacity: 0.6;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      padding-bottom: 4px;
+      font-size: 0.694rem;
+      font-family: monospace;
+    }
+
+    .radius-demo { display: flex; gap: 18px; flex-wrap: wrap; margin-bottom: 29px; }
+    .radius-box {
+      width: 100px;
+      height: 76px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.694rem;
+      font-family: monospace;
+      color: var(--muted);
+    }
+
+    hr { border: none; border-top: 1px solid var(--border); margin: 47px 0; }
+  </style>
+</head>
+<body>
+
+  <h1>Universal Design System</h1>
+  <p>Interactive reference for the structural tokens that power every project. Values below are immutable — only colors and fonts change per project.</p>
+
+  <hr>
+
+  <h2>Golden Ratio Type Scale</h2>
+  <p>Each step multiplied by φ (1.618). Base = 1rem (16px).</p>
+  <div class="scale-demo">
+    <span style="font-size:0.694rem">xs 0.694</span>
+    <span style="font-size:0.833rem">sm 0.833</span>
+    <span style="font-size:1rem">base 1.0</span>
+    <span style="font-size:1.2rem">lg 1.200</span>
+    <span style="font-size:1.618rem">xl 1.618</span>
+    <span style="font-size:2.618rem">2xl 2.618</span>
+    <span style="font-size:4.236rem">3xl</span>
+  </div>
+
+  <hr>
+
+  <h2>Fibonacci Spacing Scale</h2>
+  <p>Every spatial value derives from the Fibonacci sequence.</p>
+  <div class="spacing-demo">
+    <div class="spacing-block" style="width:20px;height:4px;">4</div>
+    <div class="spacing-block" style="width:20px;height:7px;">7</div>
+    <div class="spacing-block" style="width:20px;height:11px;">11</div>
+    <div class="spacing-block" style="width:20px;height:18px;">18</div>
+    <div class="spacing-block" style="width:20px;height:29px;">29</div>
+    <div class="spacing-block" style="width:20px;height:47px;">47</div>
+    <div class="spacing-block" style="width:20px;height:76px;">76</div>
+    <div class="spacing-block" style="width:20px;height:123px;">123</div>
+    <div class="spacing-block" style="width:20px;height:150px;">199</div>
+  </div>
+
+  <hr>
+
+  <h2>Organic Border Radii</h2>
+  <p>Asymmetric petal-inspired curves for interactive elements. Symmetric for structural ones.</p>
+  <div class="radius-demo">
+    <div class="radius-box" style="border-radius:2px 12px 2px 12px;">petal-sm</div>
+    <div class="radius-box" style="border-radius:4px 24px 4px 24px;">petal-md</div>
+    <div class="radius-box" style="border-radius:8px 48px 8px 48px;">petal-lg</div>
+    <div class="radius-box" style="border-radius:50%;">bloom</div>
+    <div class="radius-box" style="border-radius:8px;">soft</div>
+  </div>
+
+  <hr>
+
+  <h2>Golden Ratio Layouts</h2>
+  <pre><code>.layout-golden         → 61.8% | 38.2%
+.layout-golden-3       → 61.8% | 23.6% | 14.6%
+.layout-golden-reverse → 38.2% | 61.8%</code></pre>
+
+  <hr>
+
+  <h2>Color Architecture</h2>
+  <p>Seven groups, every project. Values change — structure stays.</p>
+  <table>
+    <tr><th>Group</th><th>Tokens</th><th>Role</th></tr>
+    <tr><td>Primary</td><td><code>--primary</code>, <code>--primary-dark</code></td><td>Brand identity, main visual anchor</td></tr>
+    <tr><td>Secondary</td><td><code>--secondary</code>, <code>--secondary-dark</code></td><td>Supporting hue, contrast to primary</td></tr>
+    <tr><td>Accent</td><td><code>--accent</code></td><td>Highlight, callout, emphasis</td></tr>
+    <tr><td>Signature</td><td><code>--signature</code>, <code>-dark</code>, <code>-deep</code></td><td>Gradients, decorative depth</td></tr>
+    <tr><td>Warm</td><td><code>--warm</code>, <code>--warm-dark</code></td><td>Interactive elements only</td></tr>
+    <tr><td>Dark</td><td><code>--dark-canvas</code>, <code>-surface</code>, <code>-border</code></td><td>Surfaces and elevation</td></tr>
+    <tr><td>Light</td><td><code>--light-primary</code>, <code>--light-muted</code></td><td>Text and readable content</td></tr>
+  </table>
+
+  <hr>
+
+  <h2>Font Roles</h2>
+  <table>
+    <tr><th>Role</th><th>Token</th><th>Scale Range</th><th>Purpose</th></tr>
+    <tr><td>Display</td><td><code>--font-display</code></td><td>xl → 5xl</td><td>Headlines, hero text, navigation</td></tr>
+    <tr><td>Body</td><td><code>--font-body</code></td><td>sm → lg</td><td>Paragraphs, UI labels</td></tr>
+    <tr><td>Accent</td><td><code>--font-accent</code></td><td>xs → base</td><td>Captions, metadata, code</td></tr>
+  </table>
+
+  <hr>
+
+  <h2>Quick Rules</h2>
+  <table>
+    <tr><td>Spacing</td><td>Always Fibonacci token, never arbitrary px</td></tr>
+    <tr><td>Type</td><td>Always golden ratio scale token</td></tr>
+    <tr><td>Fonts</td><td>Exactly 3 per project — display, body, accent</td></tr>
+    <tr><td>Radii</td><td>Petal curves on interactive, clean edges on structural</td></tr>
+    <tr><td>Colors</td><td>No pure #FFF or #000. No drop shadows.</td></tr>
+    <tr><td>Motion</td><td>CSS transitions first. Respect prefers-reduced-motion.</td></tr>
+    <tr><td>Layout</td><td>Golden ratio (61.8/38.2) governs all splits</td></tr>
+  </table>
+
+</body>
+</html>

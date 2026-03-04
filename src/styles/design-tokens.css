@@ -1,0 +1,72 @@
+/* ═══════════════════════════════════════════════════════════
+   UNIVERSAL DESIGN TOKENS
+   Structural foundation — never modify these values.
+   ═══════════════════════════════════════════════════════════ */
+
+:root {
+  /* ── TYPE SCALE (golden ratio × 1.618) ───────────────── */
+  --text-xs:   0.694rem;
+  --text-sm:   0.833rem;
+  --text-base: 1rem;
+  --text-lg:   1.200rem;
+  --text-xl:   1.618rem;
+  --text-2xl:  2.618rem;
+  --text-3xl:  4.236rem;
+  --text-4xl:  6.854rem;
+  --text-5xl:  11.09rem;
+
+  /* ── SPACING (Fibonacci sequence) ────────────────────── */
+  --space-xs:  4px;
+  --space-sm:  7px;
+  --space-md:  11px;
+  --space-lg:  18px;
+  --space-xl:  29px;
+  --space-2xl: 47px;
+  --space-3xl: 76px;
+  --space-4xl: 123px;
+  --space-5xl: 199px;
+
+  /* ── BORDER RADII (organic petal geometry) ────────────── */
+  --radius-petal-sm: 2px 12px 2px 12px;
+  --radius-petal-md: 4px 24px 4px 24px;
+  --radius-petal-lg: 8px 48px 8px 48px;
+  --radius-bloom:    50%;
+  --radius-soft:     8px;
+
+  /* ── TRANSITIONS ─────────────────────────────────────── */
+  --transition-fast:    0.2s ease;
+  --transition-default: 0.3s ease;
+  --transition-slow:    0.5s ease-in-out;
+
+  /* ── GOLDEN RATIO CONSTANTS ──────────────────────────── */
+  --phi:          1.618033988749;
+  --phi-inv:      0.618033988749;
+  --phi-inv-sq:   0.381966011250;
+  --golden-angle: 137.508deg;
+}
+
+/* ── BASE RESET ────────────────────────────────────────── */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ── GOLDEN RATIO LAYOUTS ──────────────────────────────── */
+.layout-golden         { display: grid; grid-template-columns: 61.8% 38.2%; }
+.layout-golden-3       { display: grid; grid-template-columns: 61.8% 23.6% 14.6%; }
+.layout-golden-reverse { display: grid; grid-template-columns: 38.2% 61.8%; }
+
+/* ── ACCESSIBILITY ─────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

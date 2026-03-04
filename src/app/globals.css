@@ -1,0 +1,21 @@
+@import '../styles/design-tokens.css';
+@import '../styles/project-tokens.css';
+@import "tailwindcss";
+
+body {
+  font-family: var(--font-body);
+  background: var(--dark-canvas);
+  color: var(--light-primary);
+  line-height: 1.618;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  line-height: 1.1;
+}
+
+code, pre, .font-accent {
+  font-family: var(--font-accent);
+}

@@ -1,0 +1,31 @@
+/* ═══════════════════════════════════════════════════════════
+   PROJECT TOKENS — Victorian Dahlia
+   Visual seed: Dark botanical illustration meets Victorian
+   wallpaper — deep burgundy dahlias against aged parchment,
+   with oxidized copper accents and candlelight warmth.
+   This is the only file that changes per project.
+   ═══════════════════════════════════════════════════════════ */
+
+:root {
+  /* ── COLORS ──────────────────────────────────────────── */
+  --primary:         #6B2D3E;   /* Dahlia burgundy */
+  --primary-dark:    #4A1E2B;   /* Deep wine */
+  --secondary:       #2D4A3E;   /* Botanical green */
+  --secondary-dark:  #1E332B;   /* Forest shadow */
+  --accent:          #D4A574;   /* Aged parchment */
+  --signature:       #8B4E6A;   /* Dahlia petal mid-tone */
+  --signature-dark:  #5C3348;   /* Dried petal */
+  --signature-deep:  #3A1F2E;   /* Pressed flower */
+  --warm:            #C4784A;   /* Oxidized copper */
+  --warm-dark:       #8E5535;   /* Tarnished copper */
+  --dark-canvas:     #1A1216;   /* Victorian parlor dark */
+  --dark-surface:    #241B1F;   /* Mahogany surface */
+  --dark-border:     #3A2E32;   /* Aged wood trim */
+  --light-primary:   #E8DDD0;   /* Candlelit parchment */
+  --light-muted:     #A89888;   /* Faded ink */
+
+  /* ── TYPOGRAPHY ──────────────────────────────────────── */
+  --font-display:    'Playfair Display', serif;
+  --font-body:       'Source Serif 4', serif;
+  --font-accent:     'JetBrains Mono', monospace;
+}

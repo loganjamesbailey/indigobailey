@@ -1,0 +1,29 @@
+/* ═══════════════════════════════════════════════════════════
+   PROJECT TOKENS — [Project Name]
+   Visual seed: [Describe the aesthetic inspiration]
+   This is the only file that changes per project.
+   ═══════════════════════════════════════════════════════════ */
+
+:root {
+  /* ── COLORS ──────────────────────────────────────────── */
+  --primary:         /* [DEFINE] */;
+  --primary-dark:    /* [DEFINE] */;
+  --secondary:       /* [DEFINE] */;
+  --secondary-dark:  /* [DEFINE] */;
+  --accent:          /* [DEFINE] */;
+  --signature:       /* [DEFINE] */;
+  --signature-dark:  /* [DEFINE] */;
+  --signature-deep:  /* [DEFINE] */;
+  --warm:            /* [DEFINE] */;
+  --warm-dark:       /* [DEFINE] */;
+  --dark-canvas:     /* [DEFINE] */;
+  --dark-surface:    /* [DEFINE] */;
+  --dark-border:     /* [DEFINE] */;
+  --light-primary:   /* [DEFINE] */;
+  --light-muted:     /* [DEFINE] */;
+
+  /* ── TYPOGRAPHY ──────────────────────────────────────── */
+  --font-display:    /* [DEFINE] */, serif;
+  --font-body:       /* [DEFINE] */, sans-serif;
+  --font-accent:     /* [DEFINE] */, monospace;
+}
