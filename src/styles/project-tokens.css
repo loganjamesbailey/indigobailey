@@ -1,29 +1,35 @@
 /* ═══════════════════════════════════════════════════════════
-   PROJECT TOKENS — [Project Name]
-   Visual seed: [Describe the aesthetic inspiration]
+   PROJECT TOKENS — Indigo Bailey
+   Visual seed: Victorian dahlia — dark botanical illustration
+   meets midnight indigo, burgundy wine, and candlelit gold.
+   A literary, moody palette for a creative writer's brand.
    This is the only file that changes per project.
    ═══════════════════════════════════════════════════════════ */
 
 :root {
   /* ── COLORS ──────────────────────────────────────────── */
-  --primary:         /* [DEFINE] */;
-  --primary-dark:    /* [DEFINE] */;
-  --secondary:       /* [DEFINE] */;
-  --secondary-dark:  /* [DEFINE] */;
-  --accent:          /* [DEFINE] */;
-  --signature:       /* [DEFINE] */;
-  --signature-dark:  /* [DEFINE] */;
-  --signature-deep:  /* [DEFINE] */;
-  --warm:            /* [DEFINE] */;
-  --warm-dark:       /* [DEFINE] */;
-  --dark-canvas:     /* [DEFINE] */;
-  --dark-surface:    /* [DEFINE] */;
-  --dark-border:     /* [DEFINE] */;
-  --light-primary:   /* [DEFINE] */;
-  --light-muted:     /* [DEFINE] */;
+  --primary:         #2E1A47;   /* Deep Indigo */
+  --primary-dark:    #3A2560;   /* Midnight Indigo */
+  --secondary:       #2D6A4F;   /* Emerald Green */
+  --secondary-dark:  #1B4332;   /* Deep Emerald */
+  --accent:          #4B3270;   /* Victorian Indigo */
+  --signature:       #6B1C23;   /* Burgundy */
+  --signature-dark:  #4A0E13;   /* Dark Burgundy */
+  --signature-deep:  #2D0A1E;   /* Black Dahlia */
+  --warm:            #C4972F;   /* Mustard Yellow — interactive */
+  --warm-dark:       #A67C28;   /* Aged Gold */
+  --dark-canvas:     #0A0A0A;   /* Jet Black */
+  --dark-surface:    #2B2B2B;   /* Charcoal Gray */
+  --dark-border:     #3D3D3D;   /* Dark Slate */
+  --light-primary:   #F2E8D5;   /* Antique Cream */
+  --light-muted:     #D4C5A9;   /* Parchment */
+
+  /* ── EXTENDED PALETTE (project-specific) ────────────── */
+  --dahlia-wine:     #3F1028;
+  --dahlia-noir:     #1A0511;
 
   /* ── TYPOGRAPHY ──────────────────────────────────────── */
-  --font-display:    /* [DEFINE] */, serif;
-  --font-body:       /* [DEFINE] */, sans-serif;
-  --font-accent:     /* [DEFINE] */, monospace;
+  --font-display:    'Stolzl', sans-serif;
+  --font-body:       'Stolzl', sans-serif;
+  --font-accent:     'Neue Kabel', monospace;
 }

@@ -1,6 +1,12 @@
+@import '../styles/fonts.css';
 @import '../styles/design-tokens.css';
 @import '../styles/project-tokens.css';
 @import "tailwindcss";
+
+/* ── BASE ─────────────────────────────────────────────── */
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   font-family: var(--font-body);
@@ -18,4 +24,44 @@ h1, h2, h3, h4, h5, h6 {
 
 code, pre, .font-accent {
   font-family: var(--font-accent);
+}
+
+/* ── LINKS ────────────────────────────────────────────── */
+a {
+  color: var(--warm);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+a:hover {
+  color: var(--warm-dark);
+}
+
+/* ── SELECTION ────────────────────────────────────────── */
+::selection {
+  background: var(--accent);
+  color: var(--light-primary);
+}
+
+/* ── SECTION SPACING ──────────────────────────────────── */
+section {
+  position: relative;
+}
+
+/* ── SCROLLBAR ────────────────────────────────────────── */
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--dark-canvas);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--dark-border);
+  border-radius: var(--radius-soft);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent);
 }

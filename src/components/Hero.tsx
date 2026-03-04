@@ -1,0 +1,193 @@
+import React from "react";
+import Button from "./Button";
+
+export default function Hero() {
+  return (
+    <section
+      id="hero"
+      style={{
+        minHeight: "100vh",
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "flex-end",
+        padding: "var(--space-3xl)",
+        position: "relative",
+        overflow: "hidden",
+      }}
+    >
+      {/* Radial gradient background */}
+      <div
+        aria-hidden="true"
+        style={{
+          position: "absolute",
+          inset: 0,
+          background: `
+            radial-gradient(ellipse at 70% 30%, #2E1A47 0%, transparent 50%),
+            radial-gradient(ellipse at 20% 70%, #3F1028 0%, transparent 40%),
+            radial-gradient(ellipse at 90% 80%, #1B4332 0%, transparent 35%),
+            #0A0A0A
+          `,
+          opacity: 0.6,
+        }}
+      />
+
+      {/* Decorative golden line */}
+      <div
+        aria-hidden="true"
+        style={{
+          position: "absolute",
+          top: "38.2%",
+          left: "var(--space-3xl)",
+          width: "61.8%",
+          height: "1px",
+          background:
+            "linear-gradient(to right, var(--warm), transparent)",
+          opacity: 0.3,
+        }}
+      />
+
+      {/* Content */}
+      <div style={{ position: "relative", zIndex: 1, maxWidth: "900px" }}>
+        <p
+          style={{
+            fontFamily: "var(--font-accent)",
+            fontSize: "var(--text-xs)",
+            letterSpacing: "0.3em",
+            textTransform: "uppercase",
+            color: "var(--warm)",
+            marginBottom: "var(--space-lg)",
+            opacity: 0.7,
+          }}
+        >
+          Writer &middot; Creative &middot; Storyteller
+        </p>
+
+        {/* Name + portrait inline */}
+        <div
+          style={{
+            display: "flex",
+            alignItems: "center",
+            gap: "var(--space-2xl)",
+            marginBottom: "var(--space-xl)",
+          }}
+          className="hero-name-row"
+        >
+          <h1
+            style={{
+              fontSize: "clamp(3rem, 8vw, 11.09rem)",
+              fontFamily: "var(--font-display)",
+              fontWeight: 300,
+              lineHeight: 0.95,
+              letterSpacing: "-0.03em",
+              color: "var(--light-primary)",
+            }}
+          >
+            Indigo
+            <br />
+            <span
+              style={{
+                color: "var(--warm)",
+                fontSize: "0.618em",
+                fontWeight: 400,
+                letterSpacing: "0.05em",
+              }}
+            >
+              Bailey
+            </span>
+          </h1>
+
+          {/* Small portrait beside name */}
+          <div
+            style={{
+              width: "clamp(120px, 12vw, 199px)",
+              height: "clamp(120px, 12vw, 199px)",
+              borderRadius: "50%",
+              overflow: "hidden",
+              flexShrink: 0,
+              border: "2px solid var(--dark-border)",
+            }}
+          >
+            <img
+              src="/indigo-bailey-portrait.PNG"
+              alt="Indigo Bailey"
+              style={{
+                width: "100%",
+                height: "100%",
+                objectFit: "cover",
+                objectPosition: "center 20%",
+                filter: "brightness(0.9) contrast(1.05)",
+              }}
+            />
+          </div>
+        </div>
+
+        <p
+          style={{
+            fontSize: "var(--text-lg)",
+            color: "var(--light-muted)",
+            maxWidth: "61.8%",
+            marginBottom: "var(--space-3xl)",
+            fontWeight: 300,
+          }}
+        >
+          Crafting stories that illuminate the spaces between what is said and
+          what is felt.
+        </p>
+
+        <div style={{ display: "flex", gap: "var(--space-lg)" }}>
+          <Button variant="primary" href="#work">
+            View Work
+          </Button>
+          <Button variant="secondary" href="#about">
+            About Me
+          </Button>
+        </div>
+      </div>
+
+      {/* Scroll indicator */}
+      <div
+        style={{
+          position: "absolute",
+          bottom: "var(--space-2xl)",
+          right: "var(--space-2xl)",
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          gap: "var(--space-sm)",
+        }}
+      >
+        <span
+          style={{
+            fontFamily: "var(--font-accent)",
+            fontSize: "var(--text-xs)",
+            letterSpacing: "0.2em",
+            textTransform: "uppercase",
+            color: "var(--light-muted)",
+            opacity: 0.4,
+            writingMode: "vertical-rl",
+          }}
+        >
+          Scroll
+        </span>
+        <div
+          style={{
+            width: "1px",
+            height: "47px",
+            background:
+              "linear-gradient(to bottom, var(--light-muted), transparent)",
+            opacity: 0.3,
+          }}
+        />
+      </div>
+
+      <style>{`
+        @media (max-width: 768px) {
+          .hero-name-row {
+            flex-direction: column;
+            align-items: flex-start !important;
+          }
+        }
+      `}</style>
+    </section>
+  );
+}
