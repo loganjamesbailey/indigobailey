@@ -260,8 +260,15 @@ export default function Contact() {
 
       <style>{`
         @media (max-width: 768px) {
+          #contact {
+            padding: var(--space-3xl) var(--space-xl) !important;
+          }
           .contact-grid {
             grid-template-columns: 1fr !important;
+            gap: var(--space-xl) !important;
+          }
+          .contact-grid > div:last-child {
+            padding-top: 0 !important;
           }
         }
       `}</style>

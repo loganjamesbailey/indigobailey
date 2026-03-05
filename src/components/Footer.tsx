@@ -5,6 +5,7 @@ export default function Footer() {
 
   return (
     <footer
+      className="site-footer"
       style={{
         padding: "var(--space-3xl)",
         borderTop: "1px solid var(--dark-border)",
@@ -38,6 +39,13 @@ export default function Footer() {
       >
         Designed with intention
       </p>
+      <style>{`
+        @media (max-width: 768px) {
+          .site-footer {
+            padding: var(--space-xl) !important;
+          }
+        }
+      `}</style>
     </footer>
   );
 }

@@ -193,8 +193,15 @@ export default function About() {
 
       <style>{`
         @media (max-width: 768px) {
+          #about {
+            padding: var(--space-3xl) var(--space-xl) !important;
+          }
           .about-grid {
             grid-template-columns: 1fr !important;
+            gap: var(--space-xl) !important;
+          }
+          .about-grid > div:last-child {
+            padding-top: 0 !important;
           }
         }
       `}</style>

@@ -76,6 +76,7 @@ export default function Work() {
       </h2>
 
       <p
+        className="work-intro"
         style={{
           fontSize: "var(--text-lg)",
           color: "var(--light-muted)",
@@ -192,6 +193,12 @@ export default function Work() {
 
       <style>{`
         @media (max-width: 768px) {
+          #work {
+            padding: var(--space-3xl) var(--space-xl) !important;
+          }
+          .work-intro {
+            max-width: 100% !important;
+          }
           .work-grid {
             grid-template-columns: 1fr !important;
           }

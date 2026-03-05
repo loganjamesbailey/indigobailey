@@ -5,6 +5,7 @@ export default function Hero() {
   return (
     <section
       id="hero"
+      className="hero-section"
       style={{
         minHeight: "100vh",
         display: "flex",
@@ -122,6 +123,7 @@ export default function Hero() {
         </div>
 
         <p
+          className="hero-subtitle"
           style={{
             fontSize: "var(--text-lg)",
             color: "var(--light-muted)",
@@ -182,9 +184,23 @@ export default function Hero() {
 
       <style>{`
         @media (max-width: 768px) {
+          .hero-section {
+            min-height: auto !important;
+            padding: var(--space-5xl) var(--space-xl) var(--space-2xl) !important;
+            justify-content: flex-start !important;
+          }
           .hero-name-row {
             flex-direction: column;
             align-items: flex-start !important;
+            gap: var(--space-lg) !important;
+          }
+          .hero-name-row > div {
+            width: clamp(80px, 20vw, 120px) !important;
+            height: clamp(80px, 20vw, 120px) !important;
+          }
+          .hero-subtitle {
+            max-width: 100% !important;
+            margin-bottom: var(--space-2xl) !important;
           }
         }
       `}</style>
