@@ -18,6 +18,11 @@ export default function Navigation() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  useEffect(() => {
+    document.body.style.overflow = menuOpen ? "hidden" : "";
+    return () => { document.body.style.overflow = ""; };
+  }, [menuOpen]);
+
   return (
     <nav
       style={{
@@ -131,6 +136,8 @@ export default function Navigation() {
             justifyContent: "center",
             gap: "var(--space-3xl)",
             zIndex: 99,
+            touchAction: "none",
+            overscrollBehavior: "contain",
           }}
         >
           {navLinks.map((link) => (
