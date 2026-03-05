@@ -1,7 +1,5 @@
 "use client";
 
-import React from "react";
-
 type ButtonVariant = "primary" | "secondary" | "dahlia";
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
@@ -41,13 +39,13 @@ export default function Button({
     justifyContent: "center",
     gap: "var(--space-sm)",
     padding: "var(--space-md) var(--space-2xl)",
-    borderRadius: "2px 12px 2px 12px",
+    borderRadius: "var(--radius-petal-sm)",
     fontSize: "var(--text-sm)",
     fontFamily: "var(--font-display)",
     letterSpacing: "0.15em",
     textTransform: "uppercase",
     cursor: "pointer",
-    transition: "all 0.3s ease",
+    transition: "all var(--transition-default)",
     textDecoration: "none",
     ...variantStyles[variant],
     ...style,

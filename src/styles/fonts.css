@@ -52,15 +52,6 @@
   font-display: swap;
 }
 
-/* ── NEW ORDER — Body ────────────────────────────────────── */
-@font-face {
-  font-family: 'New Order';
-  src: url('/fonts/New Order Regular.woff2') format('woff2');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
 /* ── NEUE KABEL — Accent ─────────────────────────────────── */
 @font-face {
   font-family: 'Neue Kabel';

@@ -1,4 +1,3 @@
-import React from "react";
 import Button from "./Button";
 
 export default function Hero() {
@@ -23,10 +22,10 @@ export default function Hero() {
           position: "absolute",
           inset: 0,
           background: `
-            radial-gradient(ellipse at 70% 30%, #2E1A47 0%, transparent 50%),
-            radial-gradient(ellipse at 20% 70%, #3F1028 0%, transparent 40%),
-            radial-gradient(ellipse at 90% 80%, #1B4332 0%, transparent 35%),
-            #0A0A0A
+            radial-gradient(ellipse at 70% 30%, var(--primary) 0%, transparent 50%),
+            radial-gradient(ellipse at 20% 70%, var(--dahlia-wine) 0%, transparent 40%),
+            radial-gradient(ellipse at 90% 80%, var(--secondary-dark) 0%, transparent 35%),
+            var(--dark-canvas)
           `,
           opacity: 0.6,
         }}
@@ -197,6 +196,7 @@ export default function Hero() {
 
       {/* Scroll indicator */}
       <div
+        className="hero-scroll-indicator"
         style={{
           position: "absolute",
           bottom: "var(--space-2xl)",
@@ -261,6 +261,9 @@ export default function Hero() {
           .hero-subtitle {
             max-width: 100% !important;
             margin-bottom: var(--space-2xl) !important;
+          }
+          .hero-scroll-indicator {
+            display: none !important;
           }
         }
       `}</style>

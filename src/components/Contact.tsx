@@ -1,7 +1,25 @@
 "use client";
 
-import React from "react";
+import type { CSSProperties, FocusEvent } from "react";
 import Button from "./Button";
+
+const inputStyle: CSSProperties = {
+  width: "100%",
+  padding: "var(--space-md) var(--space-lg)",
+  background: "var(--dark-canvas)",
+  border: "1px solid var(--dark-border)",
+  borderRadius: "var(--radius-petal-sm)",
+  color: "var(--light-primary)",
+  fontSize: "var(--text-base)",
+  fontFamily: "var(--font-body)",
+  transition: "border-color var(--transition-default)",
+  outline: "none",
+};
+
+const handleFocus = (e: FocusEvent<HTMLInputElement | HTMLTextAreaElement>) =>
+  (e.currentTarget.style.borderColor = "var(--warm)");
+const handleBlur = (e: FocusEvent<HTMLInputElement | HTMLTextAreaElement>) =>
+  (e.currentTarget.style.borderColor = "var(--dark-border)");
 
 export default function Contact() {
   return (
@@ -92,73 +110,27 @@ export default function Contact() {
               type="text"
               placeholder="Your Name"
               aria-label="Your name"
-              style={{
-                width: "100%",
-                padding: "var(--space-md) var(--space-lg)",
-                background: "var(--dark-canvas)",
-                border: "1px solid var(--dark-border)",
-                borderRadius: "2px 12px 2px 12px",
-                color: "var(--light-primary)",
-                fontSize: "var(--text-base)",
-                fontFamily: "var(--font-body)",
-                transition: "border-color 0.3s ease",
-                outline: "none",
-              }}
-              onFocus={(e) =>
-                (e.currentTarget.style.borderColor = "var(--warm)")
-              }
-              onBlur={(e) =>
-                (e.currentTarget.style.borderColor = "var(--dark-border)")
-              }
+              style={inputStyle}
+              onFocus={handleFocus}
+              onBlur={handleBlur}
             />
 
             <input
               type="email"
               placeholder="Email Address"
               aria-label="Email address"
-              style={{
-                width: "100%",
-                padding: "var(--space-md) var(--space-lg)",
-                background: "var(--dark-canvas)",
-                border: "1px solid var(--dark-border)",
-                borderRadius: "2px 12px 2px 12px",
-                color: "var(--light-primary)",
-                fontSize: "var(--text-base)",
-                fontFamily: "var(--font-body)",
-                transition: "border-color 0.3s ease",
-                outline: "none",
-              }}
-              onFocus={(e) =>
-                (e.currentTarget.style.borderColor = "var(--warm)")
-              }
-              onBlur={(e) =>
-                (e.currentTarget.style.borderColor = "var(--dark-border)")
-              }
+              style={inputStyle}
+              onFocus={handleFocus}
+              onBlur={handleBlur}
             />
 
             <textarea
               placeholder="Your Message"
               rows={5}
               aria-label="Your message"
-              style={{
-                width: "100%",
-                padding: "var(--space-md) var(--space-lg)",
-                background: "var(--dark-canvas)",
-                border: "1px solid var(--dark-border)",
-                borderRadius: "2px 12px 2px 12px",
-                color: "var(--light-primary)",
-                fontSize: "var(--text-base)",
-                fontFamily: "var(--font-body)",
-                transition: "border-color 0.3s ease",
-                outline: "none",
-                resize: "vertical",
-              }}
-              onFocus={(e) =>
-                (e.currentTarget.style.borderColor = "var(--warm)")
-              }
-              onBlur={(e) =>
-                (e.currentTarget.style.borderColor = "var(--dark-border)")
-              }
+              style={{ ...inputStyle, resize: "vertical" as const }}
+              onFocus={handleFocus}
+              onBlur={handleBlur}
             />
 
             <div>
@@ -237,7 +209,7 @@ export default function Contact() {
                   fontSize: "var(--text-sm)",
                   color: "var(--light-muted)",
                   textDecoration: "none",
-                  transition: "color 0.2s ease",
+                  transition: "color var(--transition-fast)",
                 }}
               >
                 Instagram
@@ -248,7 +220,7 @@ export default function Contact() {
                   fontSize: "var(--text-sm)",
                   color: "var(--light-muted)",
                   textDecoration: "none",
-                  transition: "color 0.2s ease",
+                  transition: "color var(--transition-fast)",
                 }}
               >
                 Substack

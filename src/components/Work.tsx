@@ -1,5 +1,3 @@
-import React from "react";
-
 interface WorkItem {
   title: string;
   category: string;
@@ -103,11 +101,11 @@ export default function Work() {
             key={item.title}
             style={{
               background: "var(--dark-surface)",
-              borderRadius: "4px 24px 4px 24px",
+              borderRadius: "var(--radius-petal-md)",
               padding: "var(--space-2xl)",
               position: "relative",
               overflow: "hidden",
-              transition: "transform 0.3s ease",
+              transition: "transform var(--transition-default)",
               cursor: "pointer",
             }}
           >

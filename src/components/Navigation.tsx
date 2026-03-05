@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 
 const navLinks = [
   { label: "About", href: "#about" },
@@ -30,7 +30,7 @@ export default function Navigation() {
         display: "flex",
         alignItems: "center",
         justifyContent: "space-between",
-        transition: "all 0.3s ease",
+        transition: "all var(--transition-default)",
         background: scrolled ? "rgba(10, 10, 10, 0.92)" : "transparent",
         backdropFilter: scrolled ? "blur(12px)" : "none",
         borderBottom: scrolled
@@ -73,7 +73,7 @@ export default function Navigation() {
               textDecoration: "none",
               letterSpacing: "0.2em",
               textTransform: "uppercase",
-              transition: "color 0.2s ease",
+              transition: "color var(--transition-fast)",
             }}
             onMouseEnter={(e) =>
               (e.currentTarget.style.color = "var(--warm)")

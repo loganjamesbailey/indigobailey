@@ -43,11 +43,6 @@ a:hover {
   color: var(--light-primary);
 }
 
-/* ── SECTION SPACING ──────────────────────────────────── */
-section {
-  position: relative;
-}
-
 /* ── SCROLLBAR ────────────────────────────────────────── */
 ::-webkit-scrollbar {
   width: 7px;

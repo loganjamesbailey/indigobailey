@@ -1,5 +1,3 @@
-import React from "react";
-
 export default function About() {
   return (
     <section
@@ -10,8 +8,6 @@ export default function About() {
         position: "relative",
       }}
     >
-      {/* Section divider — replaced by Hero transition gradient on hero/about boundary */}
-
       {/* Section label */}
       <p
         style={{
