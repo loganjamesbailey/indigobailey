@@ -35,6 +35,7 @@ export default function Hero() {
       {/* Decorative golden line */}
       <div
         aria-hidden="true"
+        className="hero-golden-line"
         style={{
           position: "absolute",
           top: "38.2%",
@@ -146,6 +147,54 @@ export default function Hero() {
         </div>
       </div>
 
+      {/* Section transition gradient */}
+      <div
+        aria-hidden="true"
+        style={{
+          position: "absolute",
+          bottom: 0,
+          left: 0,
+          right: 0,
+          height: "200px",
+          background: `
+            linear-gradient(
+              to bottom,
+              transparent 0%,
+              rgba(43, 43, 43, 0.05) 20%,
+              rgba(43, 43, 43, 0.15) 40%,
+              rgba(43, 43, 43, 0.4) 60%,
+              rgba(43, 43, 43, 0.7) 80%,
+              var(--dark-surface) 100%
+            )
+          `,
+          pointerEvents: "none",
+        }}
+      />
+      <div
+        aria-hidden="true"
+        className="hero-transition-shimmer"
+        style={{
+          position: "absolute",
+          bottom: "60px",
+          left: 0,
+          right: 0,
+          height: "1px",
+          background: `
+            linear-gradient(
+              90deg,
+              transparent 0%,
+              var(--warm) 20%,
+              var(--accent) 40%,
+              var(--signature) 60%,
+              var(--warm) 80%,
+              transparent 100%
+            )
+          `,
+          backgroundSize: "200% 100%",
+          opacity: 0.25,
+        }}
+      />
+
       {/* Scroll indicator */}
       <div
         style={{
@@ -183,11 +232,22 @@ export default function Hero() {
       </div>
 
       <style>{`
+        @keyframes shimmer {
+          0% { background-position: 200% 0; }
+          100% { background-position: -200% 0; }
+        }
+        .hero-transition-shimmer {
+          animation: shimmer 8s ease-in-out infinite;
+        }
         @media (max-width: 768px) {
           .hero-section {
             min-height: auto !important;
-            padding: var(--space-5xl) var(--space-xl) var(--space-2xl) !important;
+            padding: var(--space-2xl) var(--space-xl) var(--space-2xl) !important;
+            padding-top: calc(60px + var(--space-xl)) !important;
             justify-content: flex-start !important;
+          }
+          .hero-golden-line {
+            display: none !important;
           }
           .hero-name-row {
             flex-direction: column;

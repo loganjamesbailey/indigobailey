@@ -10,19 +10,7 @@ export default function About() {
         position: "relative",
       }}
     >
-      {/* Section divider */}
-      <div
-        aria-hidden="true"
-        style={{
-          position: "absolute",
-          top: 0,
-          left: "var(--space-3xl)",
-          width: "61.8%",
-          height: "1px",
-          background:
-            "linear-gradient(to right, var(--warm), transparent)",
-        }}
-      />
+      {/* Section divider — replaced by Hero transition gradient on hero/about boundary */}
 
       {/* Section label */}
       <p
